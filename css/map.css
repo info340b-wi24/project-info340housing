@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(img/map_background.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.85;
+    
+}
+
+h1 {
+    text-align: center;
+    font-family: "Asap", 'Kaushan Script', fantasy;
+    font-size: 3.5rem;
+    margin-top: 7vh;
+    margin-bottom: 1vh;
+    color: rgb(31, 27, 27); 
+    text-shadow: 1px 1px #153c43;
+}
+
+h2{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 1.2rem;
+    color: rgb(16, 11, 0); 
+    opacity: 0.85;
+}
+
+.flex-container-overall {
+    display: flex;
+    height: 100%;
+    margin: 1rem;
+}
+
+.flex-container-leftbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.overall-google-map {
+    flex: 1;
+    background-color: #eee;
+    padding: 1em;
+}
+
+.flex-title {
+    flex: 0 0 250px;
+    margin: 1rem 4rem 1rem 2rem;
+    padding: 0.1rem 1rem 0.5rem 1rem;
+    background-image: url(img/map_text_background.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23)
+}
+
+.flex-cards {
+    flex: 0 0 250px;
+    margin: 1rem 4rem 1rem 2rem;
+    padding: 0.1rem 1rem 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23)
+}
+
+/* Q1 */
+.flex-cards:first-child {
+    background-color: rgb(255,163,191);
+}
+
+.flex-cards:nth-child(2) {
+    background-color: rgb(255,220,167);
+}
+
+.flex-cards:nth-child(3) {
+    background-color: rgb(247,255,178);
+}
+
+.flex-cards:nth-child(4) {
+    background-color: rgb(228,235,207);
+}
+
+.flex-cards:nth-child(5) {
+    background-color:rgb(180,223,255);
+}
+
+/* Post a question */
+.flex-cards:nth-child(6) {
+    background-color: rgb(134,161,219);
+    line-height: 2rem;
+}
+
+/* submit button */
+.flex-cards:nth-child(7) {
+    background-color: rgb(247, 191, 49);
+    width: 6rem;
+}
+
+.flex-cards p,label{
+    font-size: 1rem;
+    font-family: Roboto;
+}
+
+h3 {
+    text-align: center;
+    font-family: "Asap", 'Kaushan Script', fantasy;
+    font-size: 3.5rem;
+    margin-top: 7vh;
+    margin-bottom: 1vh;
+    color: rgb(31, 27, 27); 
+    text-shadow: 1px 1px #153c43;
+}
