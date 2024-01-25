@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Zoey Zhao, Vicky Huang, Selena Yu, and Moyi Li">
+    <title>Account And Favorites Page</title>
+    <link href="css/saved.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <Section class="row">
+            <h1>
+                <img class="profile_image" src="img/user.png" alt="Default Profile Picture Icon"> Username000
+            </h1>
+            <p>Email: <a href="mailto:username000@gmail.com">username000@gmail.com</a></p>
+            <p>Phone: <a href="2061112222">206-111-2222</a></p>
+            <p>Preferred Location: Seattle, Wa</p>
+            <p>Preferences: walking distance, public transit</p>
+            <p>Leaser or Subleaser or Both or None: Leaser</p>
+        
+        </Section>
+
+        <Section class="row" style="margin-top: 50px;">
+            <h1>Favorites ❤️</h1>
+            <div>
+                <label for="sortCriteria">Sort by:</label>
+                <select id="sortCriteria">
+                    <option value="date">Date Added</option>
+                    <option value="alphabetical">Alphabetical Order</option>
+                </select>
+
+                <label for="filterInput">Filter:</label>
+                <input type="text" id="filterInput" placeholder="Enter search criteria">
+            </div>
+
+
+
+            <div class="card-container">
+                <div class="card">
+                    <h1>1.</h1>
+                    <a href="https://liveatnora.com">
+                        <img class="saved_housing" src="img/noraapartments.jpg" alt="the interior of the studio that includes the kitchen and tv">
+                    </a>
+                    <h1>Nora Apartment
+                        <a href="mailto:leasing@liveatnora.com">
+                            <img class="contact" src="img/email.png" alt="the email icon">
+                        </a>
+                        <a href="tel:+12067045368">
+                            <img class="contact" src="img/phone.png" alt="the phone icon">
+                        </a>
+                    </h1>
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes" rows="8" cols="32"></textarea>
+                    <button type="submit">Save Notes</button>
+                </div>
+                <div class="card">
+                    <h1>2.</h1>
+                    <a href="https://www.americancampus.com/student-apartments/wa/seattle/hub-u-district-seattle#faq">
+                        <img class="saved_housing" src="img/HUB_UDistrict.jpg" alt="outside of hub apartment complex">
+                    </a>
+                    <h1>Hub U District Apartment
+                        <a href="mailto:HubUDistrict@americancampus.com">
+                            <img class="contact" src="img/email.png" alt="the email icon">
+                        </a>
+                        <a href="tel:+12066392882">
+                            <img class="contact" src="img/phone.png" alt="the phone icon">
+                        </a>
+                    </h1>
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes" rows="8" cols="32"></textarea>
+                    <button type="submit">Save Notes</button>
+                </div>
+            </div>
+        </Section>
+    </div>
+
+</body>
