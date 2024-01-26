@@ -26,23 +26,25 @@
   </head>
 
   <body>
-    <header class="header-name">
+    <!-- <header class="header-name">
       <div class="cite">
         <h1 class="text-black pt-3">Dubs Housing</h1>
       </div>
-    </header>
+    </header> -->
 
     <!-- Nav bar -->
-      <div class="topnav"> 
-        <a class="active" href="index.html">Home</span></a>
+    <header>
+      <div class="topnav">
+        <img src="img/dubslogo.png" alt="washington husky"/>
+        <a href="index.html">Home</a>
         <a href="map.html">Location</a>
-        <a href="saved.html">Saved</a>
+        <a href="saved.html">Profile</a>
       </div>
+    </header>
 
     <main>
       <!-- Home -->
       <section class="home" id="home">
-        <!-- <div class="home-text"> -->
         <!-- search text input -->
         <div class="col-md-6">
           <form>
@@ -56,15 +58,15 @@
 
         <!-- search button -->
         <div class="col-sm-2 col-md-3">
-          <button class="btn btn-secondary btn-block">Search</button>
+          <button class="btn btn-secondary btn-block" id="btn">Search</button>
         </div>
-        <!-- <h1>Join us to find your next home sweet home today!</h1> -->
-        <!-- <a href="#" class="btn btn-light" role="button">Sign up</a > -->
-        <!-- </div> -->
       </section>
 
       <!-- Apartment Cards at Home Page -->
-      <section id="House results">
+      <section id="house-discovery">
+        <div class="explore-rentals">
+        <h2>Explore Rentals in Seattle, WA</h2>
+      </div>
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6 col-xl-3 d-flex">
@@ -80,7 +82,7 @@
                       <p class="lead card-text">
                         Apartment Address: 4715 25th Ave NE, Seattle, WA 98105
                       </p>
-                      <a href="./dining.html" type="button" class="btn btn-dark">Saved</a>
+                      <a href="./dining.html" type="button" class="btn btn-dark">Save</a>
                     </div>
                   </div>
                 </div>
@@ -102,7 +104,7 @@
                     <div class="col-sm">
                       <h2 class="card-title col-sm">Hub U District Seattle</h2>
                       <p class="lead card-text">Apartment Address: 5000 University Way NE, Seattle, WA 98105</p>
-                      <a type="button" class="btn btn-dark">Saved</a>
+                      <a type="button" class="btn btn-dark">Save</a>
                     </div>
                   </div>
                 </div>
@@ -126,7 +128,7 @@
                       <p class="lead card-text">
                         Apartment Address: 4700 Brooklyn Ave NE, Seattle, WA 98105
                       </p>
-                      <a type="button" class="btn btn-dark">Saved</a>
+                      <a type="button" class="btn btn-dark">Save</a>
                     </div>
                   </div>
                 </div>
@@ -152,7 +154,7 @@
                       <p class="lead card-text">
                         Apartment Address: 4220 12th Ave NE, Seattle, WA 98105
                       </p>
-                      <a type="button" class="btn btn-dark">Saved</a>
+                      <a type="button" class="btn btn-dark">Save</a>
                     </div>
                   </div>
                 </div>
@@ -164,19 +166,7 @@
     </main>
     <!-- Footer -->
     <footer>
-      <div class="container">
-        <p>
-          <a href="mailto:dubshousing@uw.edu"
-            ><span class="material-icons">email</span> dubshousing@uw.edu</a
-          >
-        </p>
-        <p>
-          <a href="tel:555-123-4567"
-            ><span class="material-icons">phone</span> 206-666-6369</a
-          >
-        </p>
-        <p>&copy; 2024 DubsHousing, Inc.</p>
-      </div>
+        <p></a>&copy; 2024 DubsHousing, Inc.</p>
     </footer>
   </body>
 </html>
