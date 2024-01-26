@@ -46,16 +46,17 @@ footer p:last-child {
 }
 
 footer {
-  position: fixed;
+  display: block;
   left: 0; right: 0; bottom: 0;
   color: white;
   background-color: purple;
 }
 
 .container {
-  max-width: 1068px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home {
@@ -87,4 +88,45 @@ main .col-md-6 {
 
 .bth {
   width: fit-content;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.card img {
+  display: block;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* responsive screen sizes */
+@media (min-width: 598px) {
+  .home {
+    height: 500px; /* Adjust height for medium-sized screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    height: 600px; /* Adjust height for large screens */
+  }
+
+  .home-text h1 {
+    font-size: 2.5rem; /* Increase font size for large screens */
+  }
+
+  .topnav a {
+    padding: 14px 20px; /* Adjust padding for larger navigation links */
+  }
+
+  .footer p {
+    line-height: 2; /* Increase line height for larger screens in the footer */
+  }
 }
