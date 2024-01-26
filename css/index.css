@@ -3,11 +3,6 @@
   color: white;
 }
 
-h6 {
-  position: absolute;
-  z-index: 1; /* Set a higher z-index to bring it to the front */
-}
-
 .topnav {
   background-color: #4B2E83;
   overflow: hidden;
