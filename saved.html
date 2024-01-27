@@ -13,6 +13,23 @@
 
 
 <body>
+
+    <div class="header_part">
+        <header class="header-name">
+            <div class="cite">
+            <h1 class="text-black pt-3">Dubs Housing <img src="img/dubslogo.png" alt="washington husky"></h1>
+            </div>
+        </header>
+        
+            <!-- Nav bar -->
+            <div class="topnav">
+            <a href="/home.html">Home</a >
+            <a href="#/location.html">Location</a >
+            <a class="active" href="#/saved.html">Saved</a >
+            </div>
+    </div>
+
+    <!--Displays user information-->
     <div class="container">
         <Section class="row">
             <img class="profile_image" src="img/user.png" alt="Default Profile Picture Icon"> 
@@ -25,22 +42,21 @@
         
         </Section>
 
-        <Section class="row" style="margin-top: 20px;">
+        <!--Displays favorited housing-->
+        <Section class="row">
             <h1 class="favorite">Favorites ❤️</h1>
-            <div>
+            <div class="sort">
                 <label for="sortCriteria">Sort by:</label>
                 <select id="sortCriteria">
                     <option value="date">Date Added</option>
                     <option value="alphabetical">Alphabetical Order</option>
                 </select>
-
                 <label for="filterInput">Filter:</label>
                 <input type="text" id="filterInput" placeholder="Enter search criteria">
             </div>
-
-
-
             <div class="card-container">
+                
+                <!--First favorited-->
                 <div class="card">
                     <h1>1.</h1>
                     <a href="https://liveatnora.com">
@@ -58,6 +74,7 @@
                     <textarea id="notes" name="notes" rows="8" cols="32"></textarea>
                     <button type="submit">Save Notes</button>
                 </div>
+                <!--Second favorited-->
                 <div class="card">
                     <h1>2.</h1>
                     <a href="https://www.americancampus.com/student-apartments/wa/seattle/hub-u-district-seattle#faq">
@@ -78,5 +95,14 @@
             </div>
         </Section>
     </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+        <p><a class="info" href="mailto:dubshousing@uw.edu"><span class="material-icons">email</span> dubshousing@uw.edu</a ></p >
+        <p><a class="info" href="tel:555-123-4567"><span class="material-icons">phone</span> 206-666-6369</a ></p >
+        <p>&copy; 2024 DubsHousing, Inc.</p >
+        </div>
+    </footer>
 
 </body>
+</html>
