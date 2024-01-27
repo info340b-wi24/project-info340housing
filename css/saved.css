@@ -12,8 +12,6 @@ body{
     background-image: url(../img/flower.jpg);
     background-size:cover;
     background-position: center;
-
-
 }
 
 .card .saved_housing {
@@ -62,7 +60,15 @@ body{
     font-size: 18px;
 }
 
+@media(min-width:598px) {
+    .card{
+        flex-direction: column;
+    }
+}
 
+@media(min-width:992px) {
+
+}
 
 
 
