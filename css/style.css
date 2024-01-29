@@ -108,9 +108,8 @@ main .col-md-6 {
   color: white
 }
 
-#btn {
+.search button {
   background-color: #4B2E83;
-  width: fit-content;
 }
 
 .card-title {
