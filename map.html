@@ -3,90 +3,111 @@
 <head>
     <meta charset="utf-8">
     <title> Map </title>
-    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" >
+    <link rel="icon" type="image/png" href="img/dubslogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-    <div class="flex-container-overall">
-        <section>
-            <!-- the overall left side -->
-            <div class="flex-container-leftbar">
-                <div class="flex-contianer-text">
-                    <h1>Best apartment for YOU! </h1>
-                    <div class="flex-title">
-                        <h2> 🔍 Take this survey and we will recommend the best apartment for you!</h2>
-                        <h2> ✅ Your Choices: Elm Hall, Lander Hall, Alder Hall!</h2>
+    <main>
+        <header>
+            <!-- Nav bar -->
+            <div class="topnav">
+                <h5 class="project-name">Dubs Housing</h5>
+                <img src="img/dubslogo.png" alt="washington husky">
+                <a href="index.html">Home</a>
+                <a href="map.html">Location</a>
+                <a href="saved.html">Profile</a>
+            </div>
+        </header>      
+        
+        <div class="flex-container-overall">
+            <section>
+                <!-- the overall left side -->
+                <div class="flex-container-leftbar">
+                    <div class="flex-contianer-text">
+                        <h1 class="top-heading">Best apartment for YOU! </h1>
+                        <div class="flex-title">
+                            <h2 class="result-texts"> 🔍 Take this survey and we will recommend the best apartment for you!</h2>
+                            <h2 class="result-texts"> ✅ Your Choices: Elm Hall, Lander Hall, Alder Hall!</h2>
+                        </div>
+                    </div>
+
+                    <div class="left-container">
+                        <!-- First question -->
+                        <div class="flex-cards">
+                            <p>1. Do you prefer on-campus or off-campus apartments?</p>
+                            <label><input type="checkbox" name="improve" value="Open"> I prefer on-campus!</label>
+                            <label><input type="checkbox" name="improve" value="Open"> I prefer off-campus!</label>
+                        </div>
+
+                        <!-- second question -->
+                        <div class="flex-cards">
+                            <p>2. Do you prefer a long-term lease or a short-term lease?</p>
+                            <label><input type="checkbox" name="improve" value="Open"> I prefer long-term (over a year)</label>
+                            <label><input type="checkbox" name="improve" value="Open"> I prefer short-term (less than a year)</label>
+                        </div>
+
+                        <!-- third question -->
+                        <div class="flex-cards"> 
+                            <p>3. How important is safety to you?</p>
+                            <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
+                        </div>
+
+                        <!-- fourth question -->
+                        <div class="flex-cards"> 
+                            <p>4. How important is living near a grocery store to you?</p>
+                            <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
+                        </div>
+
+                        <!-- fifth question -->
+                        <div class="flex-cards"> 
+                            <p>5. Do you mind living in an outdated building?</p>
+                            <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
+                            <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
+                        </div>
+
+                        <!-- leave a post  -->
+                        <div class="flex-cards">
+                            <label>💬 Feel free to leave a comment for your current apartment (or NA):</label><br>
+                            <label>The Apartment Name (or NA):</label>
+                            <input type="text"><br>
+                            <textarea rows="4" cols="40"></textarea>
+                        </div>
+
+                        <!-- submit button -->
+                        <div class="flex-cards"> 
+                            <button type="submit" class="small-button">Submit!</button>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="left-container">
-                    <!-- First question -->
-                    <div class="flex-cards">
-                        <p>1. Do you prefer on-campus or off-campus apartments?</p>
-                        <label><input type="checkbox" name="improve" value="Open"> I prefer on-campus!</label>
-                        <label><input type="checkbox" name="improve" value="Open"> I prefer off-campus!</label>
-                    </div>
-
-                    <!-- second question -->
-                    <div class="flex-cards">
-                        <p>2. Do you prefer a long-term lease or a short-term lease?</p>
-                        <label><input type="checkbox" name="improve" value="Open"> I prefer long-term (over a year)</label>
-                        <label><input type="checkbox" name="improve" value="Open"> I prefer short-term (less than a year)</label>
-                    </div>
-
-                    <!-- third question -->
-                    <div class="flex-cards"> 
-                        <p>3. How important is safety to you?</p>
-                        <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
-                    </div>
-
-                    <!-- fourth question -->
-                    <div class="flex-cards"> 
-                        <p>4. How important is living near a grocery store to you?</p>
-                        <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
-                    </div>
-
-                    <!-- fifth question -->
-                    <div class="flex-cards"> 
-                        <p>5. Do you mind living in an outdated building?</p>
-                        <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
-                        <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
-                    </div>
-
-                    <!-- leave a post  -->
-                    <div class="flex-cards">
-                        <label for="freeform">💬 Feel free to leave a comment for your current apartment (or NA):</label><br>
-                        <label for="apartment_name">The Apartment Name (or NA):</label>
-                        <input type="text" id="apartment_name" name="apartment_name"><br>
-                        <textarea id="freeform" name="freeform" rows="4" cols="50"></textarea>
-                    </div>
-
-                    <!-- submit button -->
-                    <div class="flex-cards"> 
-                        <button type="submit" class="small-button">Submit!</button>
-                    </div>
+            <section>
+                <h3 class="top-heading">Check our Interactive Map!</h3>
+                <div class="overall-google-map">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1AgOqubSb79vWu7CgVGSAdM1cSizDUso&ehbc=2E312F" width="600" height="600" title="Dubs Housing Interactive Map" aria-label="Dubs Housing Interactive Map"></iframe>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <h3>Check our Interactive Map!</h2>
-            <div class="overall-google-map">
-                <iframe src="https://www.google.com/maps/d/embed?mid=1AgOqubSb79vWu7CgVGSAdM1cSizDUso&ehbc=2E312F" width="600" height="600"></iframe>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 DubsHousing, Inc.</p>
+        </footer>
+    </main>
     
 </body>
 </html>
