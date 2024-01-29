@@ -252,7 +252,7 @@ section h2 {
   padding:0;
 }
 
-.saved_card .saved_housing {
+.saved_card .saved_housing, .saved_card textarea{
   width: 300px;
   height: 200px;
 }
@@ -260,6 +260,13 @@ section h2 {
 .saved_card h1 .saved_contact {
   width: 35px;
   height: 35px;
+}
+
+.saved_card label, .saved_card textarea, .saved_card button {
+  display: block;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .saved_card-container {
@@ -303,90 +310,90 @@ section h2 {
 
 /* responsive media */
 @media (max-width: 598px) {
-    .home {
+  .home {
       height: 500px; 
-    }
+  }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-top: 5vh;
-    }
-    
-    h2{
-      font-size: 1.5rem;
-    }
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 5vh;
+  }
+  
+  h2{
+    font-size: 1.5rem;
+  }
 
-    .overall-google-map, h3 {
-      display:none;
-    }
+  .overall-google-map, h3 {
+    display:none;
+  }
 
-    .saved_container .saved_row{
-    font-size:23px;
-    }
+  .saved_container .saved_row{
+  font-size:23px;
+  }
 
-    .saved_card-container {
-      flex-direction: column;
-    }
+  .saved_card-container {
+    flex-direction: column;
+  }
 
-    .saved_card h1 {
-      font-size: 2rem;
-    }
+  .saved_card h1 {
+    font-size: 2rem;
+  }
 
-    .saved_card textarea, .saved_card button, .saved_card label {
-      display: none;
-    }
+  .saved_card textarea, .saved_card button, .saved_card label {
+    display: none;
+  }
 
 }
 
 @media (max-width: 992px) {
-    .home {
-      height: 600px;
-    }
+  .home {
+    height: 600px;
+  }
+  
+  .home-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .topnav a {
+    padding: 14px 20px;
+  }
+
+  .footer p {
+    line-height: 2;
+  }
     
-    .home-text h1 {
-      font-size: 2.5rem;
-    }
+  .flex-container-overall {
+    flex-direction: column-reverse;
+  }
 
-    .topnav a {
-      padding: 14px 20px;
-    }
+  .flex-container-leftbar, .overall-google-map {
+    flex: 1;
+    width: 100%;
+    margin: 0;
+  }
 
-    .footer p {
-      line-height: 2;
-    }
-      
-    .flex-container-overall {
-      flex-direction: column-reverse;
-    }
+  .overall-google-map {
+    order: 2;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
 
-    .flex-container-leftbar, .overall-google-map {
-      flex: 1;
-      width: 100%;
-      margin: 0;
-    }
+  .flex-title, .flex-cards {
+    margin: 1rem;
+  }
 
-    .overall-google-map {
-      order: 2;
-      overflow: hidden;
-      width: 100%;
-      justify-content: center;
-      width: fit-content;
-      margin: 0 auto;
-    }
+  .saved_card textarea {
+    width: 300px; 
+    height: 70px;
+    resize: none;
+    justify-content: center;
+  }
 
-    .flex-title, .flex-cards {
-      margin: 1rem;
-    }
-
-    .saved_card textarea {
-      width: 300px; 
-      height: 70px;
-      resize: none;
-      justify-content: center;
-    }
-
-    .saved_card button, .saved_card label {
-      display: none;
-    }
+  .saved_card button, .saved_card label {
+    display: none;
+  }
 
 }
