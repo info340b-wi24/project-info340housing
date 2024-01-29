@@ -26,10 +26,7 @@ body {
 }
 
 .topnav h1 {
-<<<<<<< HEAD
   font-size: x-large;
-=======
->>>>>>> origin/main
   color: white;
 }
 
@@ -39,19 +36,11 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-<<<<<<< HEAD
   font-size: 25px;
 }
 
 .topnav img {
   width: 3rem;
-=======
-  font-size: 18px;
-}
-
-.topnav img {
-  width: 4rem;
->>>>>>> origin/main
   float: left;
 }
 
@@ -119,13 +108,8 @@ main .col-md-6 {
   color: white
 }
 
-<<<<<<< HEAD
 #btn {
   background-color: #4B2E83;
-=======
-button{
-  background-color: lightblue;
->>>>>>> origin/main
   width: fit-content;
 }
 
@@ -406,5 +390,3 @@ section h2 {
     }
 
 }
-
-
