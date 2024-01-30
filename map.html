@@ -38,7 +38,7 @@
                         <!-- First question -->
                         <div class="flex-cards">
                             <p>1. Do you prefer on-campus or off-campus apartments?</p>
-                            <form>
+                            <form id="map_1">
                                 <label for="q1_on_campus"><input type="checkbox" name="improve" id="q1_on_campus" value="Open"> I prefer on-campus!</label>
                                 <label for="q1_off_campus"><input type="checkbox" name="improve" id="q1_off_campus" value="Open"> I prefer off-campus!</label>
                             </form>
@@ -47,14 +47,16 @@
                         <!-- second question -->
                         <div class="flex-cards">
                             <p>2. Do you prefer a long-term lease or a short-term lease?</p>
-                            <label for="q2_long"><input type="checkbox" name="improve" id="q2_long" value="Open"> I prefer long-term (over a year)</label>
-                            <label for="q2_short"><input type="checkbox" name="improve" id="q2_short" value="Open"> I prefer short-term (less than a year)</label>
+                            <form id="map_2">
+                                <label for="q2_long"><input type="checkbox" name="improve" id="q2_long" value="Open"> I prefer long-term (over a year)</label>
+                                <label for="q2_short"><input type="checkbox" name="improve" id="q2_short" value="Open"> I prefer short-term (less than a year)</label>
+                            </form>
                         </div>
 
                         <!-- third question -->
                         <div class="flex-cards"> 
                             <p>3. How important is safety to you?</p>
-                            <form>
+                            <form id="map_3">
                                 <label for="q3_1"><input type="checkbox" name="improve" id="q3_1" value="Open"> Not at all!</label>
                                 <label for="q3_2"><input type="checkbox" name="improve" id="q3_2" value="Open"> Slightly</label>
                                 <label for="q3_3"><input type="checkbox" name="improve" id="q3_3" value="Open"> Neutral</label>
@@ -66,7 +68,7 @@
                         <!-- fourth question -->
                         <div class="flex-cards"> 
                             <p>4. How important is living near a grocery store to you?</p>
-                            <form>
+                            <form id="map_4">
                                 <label for="q4_1"><input type="checkbox" name="improve" id="q4_1" value="Open"> Not at all!</label>
                                 <label for="q4_2"><input type="checkbox" name="improve" id="q4_2" value="Open"> Slightly</label>
                                 <label for="q4_3"><input type="checkbox" name="improve" id="q4_3" value="Open"> Neutral</label>
@@ -78,7 +80,7 @@
                         <!-- fifth question -->
                         <div class="flex-cards"> 
                             <p>5. Do you mind living in an outdated building?</p>
-                            <form>
+                            <form id="map_5">
                                 <label for="q5_1"><input type="checkbox" name="improve" id="q5_1" value="Open"> Not at all!</label>
                                 <label for="q5_2"><input type="checkbox" name="improve" id="q5_2" value="Open"> Slightly</label>
                                 <label for="q5_3"><input type="checkbox" name="improve" id="q5_3" value="Open"> Neutral</label>
@@ -89,7 +91,7 @@
 
                         <!-- leave a post  -->
                         <div class="flex-cards">
-                            <form>
+                            <form id="map_post">
                                 <label for="map_comment">💬 Feel free to leave a comment for your current apartment (or NA):</label><br>
                                 <label for="map_comment">The Apartment Name (or NA):</label>
                                 <input type="text"><br>

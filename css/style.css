@@ -94,10 +94,6 @@ footer {
   justify-content: center;
 }
 
-main .col-md-6 {
-  position: center;
-}
-
 .home-text {
   padding-left: 35px;
 }
@@ -253,7 +249,7 @@ main .col-md-6 {
   height: 200px;
 }
 
-.saved_card h1 .saved_contact {
+.saved_card h2 .saved_contact {
   width: 35px;
   height: 35px;
 }
@@ -281,7 +277,7 @@ main .col-md-6 {
   color:black;
 }
 
-.saved_container:nth-child(1) h1 {
+.saved_container:nth-child(1) h2 {
   font-size: 24px;
 }
 
