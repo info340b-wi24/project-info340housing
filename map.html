@@ -38,53 +38,63 @@
                         <!-- First question -->
                         <div class="flex-cards">
                             <p>1. Do you prefer on-campus or off-campus apartments?</p>
-                            <label><input type="checkbox" name="improve" value="Open"> I prefer on-campus!</label>
-                            <label><input type="checkbox" name="improve" value="Open"> I prefer off-campus!</label>
+                            <form>
+                                <label for="q1_on_campus"><input type="checkbox" name="improve" id="q1_on_campus" value="Open"> I prefer on-campus!</label>
+                                <label for="q1_off_campus"><input type="checkbox" name="improve" id="q1_off_campus" value="Open"> I prefer off-campus!</label>
+                            </form>
                         </div>
 
                         <!-- second question -->
                         <div class="flex-cards">
                             <p>2. Do you prefer a long-term lease or a short-term lease?</p>
-                            <label><input type="checkbox" name="improve" value="Open"> I prefer long-term (over a year)</label>
-                            <label><input type="checkbox" name="improve" value="Open"> I prefer short-term (less than a year)</label>
+                            <label for="q2_long"><input type="checkbox" name="improve" id="q2_long" value="Open"> I prefer long-term (over a year)</label>
+                            <label for="q2_short"><input type="checkbox" name="improve" id="q2_short" value="Open"> I prefer short-term (less than a year)</label>
                         </div>
 
                         <!-- third question -->
                         <div class="flex-cards"> 
                             <p>3. How important is safety to you?</p>
-                            <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
+                            <form>
+                                <label for="q3_1"><input type="checkbox" name="improve" id="q3_1" value="Open"> Not at all!</label>
+                                <label for="q3_2"><input type="checkbox" name="improve" id="q3_2" value="Open"> Slightly</label>
+                                <label for="q3_3"><input type="checkbox" name="improve" id="q3_3" value="Open"> Neutral</label>
+                                <label for="q3_4"><input type="checkbox" name="improve" id="q3_4" value="Open"> Somewhat</label>
+                                <label for="q3_5"><input type="checkbox" name="improve" id="q3_5" value="Open"> Strongly</label>
+                            </form>
                         </div>
 
                         <!-- fourth question -->
                         <div class="flex-cards"> 
                             <p>4. How important is living near a grocery store to you?</p>
-                            <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
+                            <form>
+                                <label for="q4_1"><input type="checkbox" name="improve" id="q4_1" value="Open"> Not at all!</label>
+                                <label for="q4_2"><input type="checkbox" name="improve" id="q4_2" value="Open"> Slightly</label>
+                                <label for="q4_3"><input type="checkbox" name="improve" id="q4_3" value="Open"> Neutral</label>
+                                <label for="q4_4"><input type="checkbox" name="improve" id="q4_4" value="Open"> Somewhat</label>
+                                <label for="q4_5"><input type="checkbox" name="improve" id="q4_5" value="Open"> Strongly</label>
+                            </form>
                         </div>
 
                         <!-- fifth question -->
                         <div class="flex-cards"> 
                             <p>5. Do you mind living in an outdated building?</p>
-                            <label><input type="checkbox" name="improve" value="Open"> Not at all!</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Slightly</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Neutral</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Somewhat</label>
-                            <label><input type="checkbox" name="improve" value="Open"> Strongly</label>
+                            <form>
+                                <label for="q5_1"><input type="checkbox" name="improve" id="q5_1" value="Open"> Not at all!</label>
+                                <label for="q5_2"><input type="checkbox" name="improve" id="q5_2" value="Open"> Slightly</label>
+                                <label for="q5_3"><input type="checkbox" name="improve" id="q5_3" value="Open"> Neutral</label>
+                                <label for="q5_4"><input type="checkbox" name="improve" id="q5_4" value="Open"> Somewhat</label>
+                                <label for="q5_5"><input type="checkbox" name="improve" id="q5_5" value="Open"> Strongly</label>
+                            </form>
                         </div>
 
                         <!-- leave a post  -->
                         <div class="flex-cards">
-                            <label>💬 Feel free to leave a comment for your current apartment (or NA):</label><br>
-                            <label>The Apartment Name (or NA):</label>
-                            <input type="text"><br>
-                            <textarea rows="4" cols="40"></textarea>
+                            <form>
+                                <label for="map_comment">💬 Feel free to leave a comment for your current apartment (or NA):</label><br>
+                                <label for="map_comment">The Apartment Name (or NA):</label>
+                                <input type="text"><br>
+                                <textarea id="map_comment" rows="4" cols="40"></textarea>
+                            </form>
                         </div>
 
                         <!-- submit button -->
