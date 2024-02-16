@@ -84,7 +84,7 @@ footer {
 }
 
 .home {
-  background-image: url('../img/spaceneedle.jpg');
+  background-image: url('../../public/img/spaceneedle.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -132,11 +132,12 @@ footer {
   margin-top: 5rem;
   text-align: center;
 }
-  
+
+
 /* map page */
 .top-heading {
   text-align: center;
-  font-family: "Asap", 'Kaushan Script', fantasy;
+  font-family: "Asap", 'Kaushan Script', fantasy, 'sans-serif';
   font-size: 3.5rem;
   margin-top: 3vh;
   margin-bottom: 1vh;
@@ -146,7 +147,7 @@ footer {
 
 .result-texts {
   text-align: center;
-  font-family: fantasy;
+  font-family: fantasy, 'sans-serif';
   font-size: 1.3rem;
   color: rgb(16, 11, 0); 
   padding-top: 1.5rem;
@@ -155,20 +156,27 @@ footer {
 
 .flex-container-overall {
   display: flex;
-  height: 100%;
-  margin: 1rem;
+  flex-direction: column-reverse;
+  width: 100%;
+  overflow: auto;
 }
 
-.flex-container-leftbar, .flex-container-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.flex-container-leftbar {
+  flex: 1;
+  width: 100%;
+  margin: 0;
 }
 
 .overall-google-map {
-  margin-top: 2rem;
+  order: 2;
   justify-content: center;
-  flex: 1;
+  width: 100%;
+  overflow: auto;
+  padding: 1.5rem;
+}
+
+iframe{
+  width:100%;
 }
 
 .flex-title {
@@ -222,29 +230,40 @@ footer {
 
 .flex-cards p,label{
   font-size: 1rem;
-  font-family: Roboto;
+  font-family: Roboto, 'sans-serif';
 }
 
-
 /* profile page */
+.saved_card textarea {
+  height: 50px;
+  width: 200px;
+  justify-content: center;
+}
+
+.saved_card button, .saved_card label {
+  display: block;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 .saved_profile_image {
   width: 100px; 
   height: auto; 
 }
 
 .saved_overall_flex_container {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(../img/flower.jpg);
+  background-image: url(../../public/img/flower.jpg);
   background-size:cover;
   background-position: center;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-.saved_card .saved_housing, .saved_card textarea{
+.saved_housing{
   width: 300px;
   height: 200px;
 }
@@ -254,22 +273,16 @@ footer {
   height: 35px;
 }
 
-.saved_card label, .saved_card textarea, .saved_card button {
-  display: block;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
 .saved_card-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .saved_card {
   margin: 30px;
   box-sizing: border-box;
   padding: 20px;
+  
 }
 
 .saved_container:nth-child(1) a {
@@ -294,50 +307,67 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 0;
 }
 
-.saved_container .saved_row p{
+.saved_container .saved_row p {
   font-size: 18px;
 }
 
+/* Filter container */
+.saved_sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.saved_sort label,
+.saved_sort select {
+  margin: 0.5rem;
+}
+  
 /* responsive media */
-@media (max-width: 598px) {
+@media (min-width: 598px) {
   .home {
       height: 500px; 
   }
 
-  h1 {
-    font-size: 2.5rem;
+  /* map page start */
+  h1, h3{
+    font-size: 1.5rem;
     margin-top: 5vh;
   }
-  
-  h2{
-    font-size: 1.5rem;
+
+  .overall-google-map{
+    margin-bottom: 3rem;
   }
 
-  .overall-google-map, h3 {
-    display:none;
-  }
-
-  .saved_container .saved_row{
-  font-size:23px;
-  }
-
-  .saved_card-container {
+  .flex-container-overall {
     flex-direction: column;
+  }
+
+  /* map page end */
+  .saved_container .saved_row{
+    font-size:23px;
+    }
+  
+  .saved_card-container {
+    flex-direction: row;
   }
 
   .saved_card h1 {
     font-size: 2rem;
   }
 
-  .saved_card textarea, .saved_card button, .saved_card label {
-    display: none;
+  .saved_card textarea{
+    height: 70px;
+    width: 200px;
   }
 
 }
 
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .home {
     height: 600px;
   }
@@ -353,39 +383,37 @@ footer {
   .footer p {
     line-height: 2;
   }
-    
+
+  /* map page start */
   .flex-container-overall {
-    flex-direction: column-reverse;
+    display: flex;
+    height: 100%;
+    margin: 1rem;
+    flex-direction: row;
   }
 
-  .flex-container-leftbar, .overall-google-map {
-    flex: 1;
-    width: 100%;
-    margin: 0;
+  .flex-container-leftbar, .flex-container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .overall-google-map {
-    order: 2;
-    overflow: hidden;
-    width: 100%;
+    margin-top: 2rem;
     justify-content: center;
-    width: fit-content;
+    flex: 1;
+  }
+
+  .saved_card label, .saved_card button {
+    display: block;
+    margin-bottom: 10px;
+    box-sizing: border-box;
     margin: 0 auto;
   }
 
-  .flex-title, .flex-cards {
-    margin: 1rem;
-  }
-
-  .saved_card textarea {
-    width: 300px; 
-    height: 70px;
-    resize: none;
-    justify-content: center;
-  }
-
-  .saved_card button, .saved_card label {
-    display: none;
+  .saved_card textarea{
+    height: 100px;
+    width: 300px;
   }
 
 }
