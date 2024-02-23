@@ -1,29 +1,17 @@
-import React, { useState } from 'react';
-import { MapQuestionList, MapAnswerCard, InteractiveMap } from './map';
-import {Header, Footer} from './headerfooter.js';
+import { InfoDescr } from './HousingInfo.js';
+import { HouseLists } from './HouseList.js';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-function App(props) {
-	return (
-		<main>
-            <Header />
-            
-            <div className="flex-container-overall">
-                <section>
-                    <div className="flex-container-leftbar">
-
-                        <MapAnswerCard />
-                        <MapQuestionList questions={props.questions} />
-
-                    </div>
-                </section>
-                
-                <InteractiveMap />
-            
-            </div>
-            <Footer />
-        </main>
-	);
-}
-
-export default App;
-
+  export default function App(props) {
+      return (
+          <div>
+            <NavBar/>
+            <Routes>
+              <Route path="home" element={<HouseLists />} />
+              <Route index element={<HouseLists />} />
+              <Route path=":whichJob" element={<InfoDescr />} />
+            </Routes>
+            <Footer /> 
+          </div>
+      );
+  }
