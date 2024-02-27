@@ -32,9 +32,9 @@ function HousingOption(props) {
     const housingInfo = props.infosDescr.housingInfo;
     const housingDuties = props.infosDescr.housingDuties;
 
-    const handleClick = () => {
-        setApplied(true);
-    }
+    // const handleClick = () => {
+    //     setApplied(true);
+    // }
 
     const handleSave = () => {
         const data = getDatabase();
