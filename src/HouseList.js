@@ -65,17 +65,26 @@ export default function HouseLists(props) {
     ));
 
     return (
-        <div>
-            {<SearchCom userInput={userInput} setUserInput={setUserInput} /> }
-            <section id="final apartment">
-              <div className="container d-flex flex-column flex-lg-row">
-                {filteredHouses.length === 0 ? (
-                  <p>We're sorry, but there are no apartments matching your search.</p>
-                ) : (
-                  filteredHouses
-                )}
-              </div>
-            </section>
-        </div>
+        <section>
+            <div className="home">
+                <div className="col-md-6">
+                    {<SearchCom className='search btn btn-secondary btn-block'userInput={userInput} setUserInput={setUserInput} /> }
+                </div>
+            </div>
+
+            <div>
+                <section id="final apartment">
+                <div className="container d-flex flex-column flex-lg-row">
+                    {filteredHouses.length === 0 ? (
+                    <p>We're sorry, but there are no apartments matching your search.</p>
+                    ) : (
+                    filteredHouses
+                    )}
+                </div>
+                </section>
+            </div>
+
+        </section>
+
     );
 }

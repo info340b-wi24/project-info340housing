@@ -17,7 +17,7 @@ export default function SearchCom({ userInput, setUserInput }) {
 
     return (
         <div className="container">
-            <div className="row d-flex justify-content-center">
+            <div className="row">
                 <div className="col-md-10">
                     <div className="card p-3 py-4">
                         <SearchItem
