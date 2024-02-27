@@ -1,17 +1,20 @@
-import { InfoDescr } from './HousingInfo.js';
-import { HouseLists } from './HouseList.js';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HouseLists from './HouseList'; // Adjust the import according to your file structure
+import { InfoDescr } from './HousingInfo'; // Make sure the import matches the export
 
-  export default function App(props) {
-      return (
-          <div>
-            <NavBar/>
+export default function App() {
+    return (
+        <div>
+            {/* NavBar component can be added here if you have one */}
             <Routes>
-              <Route path="home" element={<HouseLists />} />
-              <Route index element={<HouseLists />} />
-              <Route path=":whichJob" element={<InfoDescr />} />
+                <Route path="/HouseList" element={<HouseLists />} />
+                <Route index element={<HouseLists />} />
+                <Route path="/HousingInfo/:id" element={<InfoDescr />} />
             </Routes>
-            <Footer /> 
-          </div>
-      );
-  }
+            <footer>
+                <p>&copy; 2024 DubsHousing, Inc.</p>
+            </footer>
+        </div>
+    );
+}
