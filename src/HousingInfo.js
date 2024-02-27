@@ -21,20 +21,11 @@ function HousingOption(props) {
         "We have Conference and Study Rooms in the floor"
     ];
 
-    const HousingDutiesList = Housing_Duties_Data.map((duty) => {
-        const housingDetail = (<HousingDuty duty={duty} key={duty}/>);
-        return housingDetail;
+    const HousingDutiesList = Housing_Duties_Data.map((duty, index) => {
+        return <HousingDuty duty={duty} key={index} />;
     });
 
-    const housingName = props.infosDescr.housingName;
-    const housingdetailImg = props.infosDescr.housingdetailImg;
-    const housingImgAlt = props.infosDescr.jobImgAlt
-    const housingInfo = props.infosDescr.housingInfo;
-    const housingDuties = props.infosDescr.housingDuties;
-
-    // const handleClick = () => {
-    //     setApplied(true);
-    // }
+    const { housingName, housingdetailImg, housingImgAlt, housingInfo, housingDuties } = props.infosDescr;
 
     const handleSave = () => {
         const data = getDatabase();
@@ -42,7 +33,7 @@ function HousingOption(props) {
         firebasePush(savedHousing, {title: housingName, description: housingInfo, image: housingdetailImg, imageAlt: housingImgAlt});
         setSave(true);
     }
-    
+
     return (
         <div>
             <h2 className="text-center">{housingName}</h2>
@@ -55,7 +46,7 @@ function HousingOption(props) {
                 {housingDuties && <ul>{HousingDutiesList}</ul>}
             </div>
             <div className="mb-3">
-                <Link to="/saved" className="btn purple-button mx-2" onClick={handleSave} disabled={save}>Saved It</Link>
+                <Link to="/saved" className="btn purple-button mx-2" onClick={handleSave} disabled={save}>Save It</Link>
             </div>
         </div>
     );
@@ -93,15 +84,13 @@ export function InfoDescr(props) {
         houseInfoPath: "standard-page"}
     ];
 
-    const paramsObj = useParams();
-    const selectHousing = paramsObj.selectHousing;
+    const { id } = useParams();
+    const selectedInfo = Info_Descr_Data.find(info => info.houseInfoPath === id);
 
-    const clickHousing = Info_Descr_Data.filter((cards) => {
-        return cards.houseInfoPath === selectHousing;
-    });
+    if (!selectedInfo) {
+        return <div>Information not found</div>;
+    }
 
-    return (
-        <HousingOption infosDescr={clickHousing[0]} />
-    );
+    return <HousingOption infosDescr={selectedInfo} />;
 
 }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import SearchCom from './searchComponet.js';
 import { Link } from 'react-router-dom';
 
 function HouseList(props) {
     const { houseListTitle, houseListAddress, houseListImg, houseListImgAlt, houseInfoPath } = props;
-
     return (
         <Card className='mx-2 my-2'>
             <Card.Img variant='top' src={houseListImg} alt={houseListImgAlt}/>
@@ -66,8 +66,7 @@ export default function HouseLists(props) {
 
     return (
         <div>
-            {/* Implement your SearchBar component here */}
-            {/* <SearchBar userInput={userInput} setUserInput={setUserInput} /> */}
+            {<SearchCom userInput={userInput} setUserInput={setUserInput} /> }
             <section id="final apartment">
               <div className="container d-flex flex-column flex-lg-row">
                 {filteredHouses.length === 0 ? (
