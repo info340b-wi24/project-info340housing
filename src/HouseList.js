@@ -66,7 +66,7 @@ export default function HouseLists(props) {
 
     return (
         <section>
-            <div className="home">     
+            <div className="home">    
                 {<SearchCom className='search btn btn-secondary btn-block'userInput={userInput} setUserInput={setUserInput} /> }
             </div>
 

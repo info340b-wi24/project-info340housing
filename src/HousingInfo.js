@@ -29,26 +29,23 @@ function HousingOption(props) {
     const { housingName, housingdetailImg, housingImgAlt, housingInfo, housingDuties } = props.infosDescr;
 
     const handleSave = () => {
-        // const data = getDatabase();
-        // const savedHousing = ref(data, "savedHousing");
-        // firebasePush(savedHousing, {title: housingName, description: housingInfo, image: housingdetailImg, imageAlt: housingImgAlt});
         setSave(true);
         navigate("/saved");
     }
 
     return (
-        <div>
-            <h2 className="text-center">{housingName}</h2>
-            <div className="text-center house-image-info">
+        <div className="house-info-container">
+            <h2 className="house-title">{housingName}</h2>
+            <div className="house-image-info">
                 <img src={housingdetailImg} alt={housingImgAlt} />
             </div>
-            <div className="mx-4">
-                <h3 className="text-black">More Details for Apartment</h3>
-                <p>{housingInfo}</p>
-                {housingDuties && <ul>{HousingDutiesList}</ul>}
+            <div className="house-details">
+                <h3 className="house-details-title">More Details for Apartment</h3>
+                <p className="house-info-paragraph">{housingInfo}</p>
+                {housingDuties && <ul className="house-duties-list">{HousingDutiesList}</ul>}
             </div>
-            <div className="mb-3">
-                <button className="btn btn-primary mx-2" onClick={handleSave} disabled={save}>Save It</button>
+            <div className="house-save-button">
+                <button className="btn btn-primary" onClick={handleSave} disabled={save}>Save It</button>
             </div>
         </div>
     );

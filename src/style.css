@@ -423,3 +423,57 @@ iframe{
   }
 
 }
+
+/* housing option */
+.house-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.house-title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.house-image-info {
+  text-align: center;
+}
+
+.house-image-info img {
+  max-width: 100%;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.house-details {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.house-details-title {
+  margin-bottom: 10px;
+}
+
+.house-info-paragraph {
+  margin-bottom: 20px;
+}
+
+.house-duties-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.house-save-button {
+  text-align: center;
+}
+
