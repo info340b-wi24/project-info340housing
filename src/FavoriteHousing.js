@@ -25,7 +25,7 @@ function FavoriteHousing() {
 				<a href="https://liveatnora.com">
 					<img className="saved_housing" src="/img/noraapartments.jpg" alt="the interior of the studio that includes the kitchen and tv" />
 				</a >
-				<h2>Nora Apartment
+				<h2>Nora Apartment 
 					<a href="mailto:leasing@liveatnora.com">
 						<img className="saved_contact" src="/img/email.png" alt="the email icon" />
 					</a >
@@ -35,14 +35,14 @@ function FavoriteHousing() {
 				</h2>
 				<label htmlFor="notes_1">Notes:</label>
 				<textarea id="notes_1" rows="8" cols="32"></textarea>
-				<button type="submit">Save Notes</button>
+				<button className='btn btn-info mt-2' type="submit">Save Notes</button>
 			</div>
 			<div className="saved_card">
 				<h2>2.</h2>
 				<a href="https://www.americancampus.com/student-apartments/wa/seattle/hub-u-district-seattle#faq">
 					<img className="saved_housing" src="/img/HUB_UDistrict.jpg" alt="outside of hub apartment complex" />
 				</a >
-				<h2>Hub U District Apartment
+				<h2>Hub U District Apartment 
 					<a href="mailto:HubUDistrict@americancampus.com">
 						<img className="saved_contact" src="/img/email.png" alt="the email icon" />
 					</a >
@@ -52,7 +52,7 @@ function FavoriteHousing() {
 				</h2>
 				<label htmlFor="notes_2">Notes:</label>
 				<textarea id="notes_2" rows="8" cols="32"></textarea>
-				<button type="submit">Save Notes</button>
+				<button className='btn btn-info mt-2' type="submit">Save Notes</button>
 			</div>
     	</div>
 	</section>

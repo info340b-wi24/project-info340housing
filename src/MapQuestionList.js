@@ -56,14 +56,16 @@ export function MapQuestionList({ questions, updateAllSelections, updateSubmitte
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             {submitted && (
                 <div>
-                    <p>Thank you for submitting!</p>
+                    <p className='mt-2'> 🎉Thank you for submitting!</p>
                     <p>The best apartment for you are shown above!</p>
                 </div>
             )}
-            {currentQuestionIndex < questions.length - 1 ? (
-                <button onClick={handleNextClick} disabled={submitted}>Next</button>
-            ) : (
-                <button onClick={handleSubmit}>Submit</button>
+            {!submitted && ( // Render submit button only if not submitted
+                currentQuestionIndex < questions.length - 1 ? (
+                    <button className='btn btn-light mt-2' onClick={handleNextClick} disabled={submitted}>Next</button>
+                ) : (
+                    <button className='btn btn-success mt-2' onClick={handleSubmit}>Submit</button>
+                )
             )}
         </div>
     );
