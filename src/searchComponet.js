@@ -16,7 +16,7 @@ export default function SearchCom({ userInput, setUserInput }) {
     };
 
     return (
-        <div className="card p-3 py-4 mx-4 w-100">
+        <div className="search-bar">
             <SearchItem
                 userInput={userInput}
                 handleInputChange={handleInputChange}
@@ -39,7 +39,7 @@ function SearchItem({ userInput, handleInputChange, handleSearch, handleReset })
                 />
             </Form.Group>
             <Button variant="primary" onClick={handleSearch}>Search</Button>{' '}
-            <Button variant="danger" onClick={handleReset}>To Clear</Button>
+            <Button variant="danger" onClick={handleReset}>Clear</Button>
         </Form>
     );
 }

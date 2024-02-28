@@ -7,7 +7,7 @@ export function MapQuestionList({ questions, updateAllSelections, updateSubmitte
     const [errorMessage, setErrorMessage] = useState('');
 
     const handleNextClick = () => {
-        if (!submitted && selectedAnswers[currentQuestionIndex] !== null) { // Check if not submitted
+        if (!submitted && selectedAnswers[currentQuestionIndex] !== null) {
             setCurrentQuestionIndex(prevIndex => prevIndex + 1);
             setErrorMessage('');
         } else if (submitted) {
@@ -27,7 +27,6 @@ export function MapQuestionList({ questions, updateAllSelections, updateSubmitte
     const currentQuestion = questions[currentQuestionIndex];
 
     const handleSubmit = () => {
-
         setSubmitted(true);
         updateAllSelections(selectedAnswers.filter(answer => answer !== null));
         updateSubmitted(true);
@@ -55,6 +54,12 @@ export function MapQuestionList({ questions, updateAllSelections, updateSubmitte
                 </form>
             </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
+            {submitted && (
+                <div>
+                    <p>Thank you for submitting!</p>
+                    <p>The best apartment for you are shown above!</p>
+                </div>
+            )}
             {currentQuestionIndex < questions.length - 1 ? (
                 <button onClick={handleNextClick} disabled={submitted}>Next</button>
             ) : (
@@ -63,4 +68,3 @@ export function MapQuestionList({ questions, updateAllSelections, updateSubmitte
         </div>
     );
 }
-

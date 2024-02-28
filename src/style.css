@@ -17,6 +17,7 @@ body {
   background-color: #4B2E83;
   color: white;
   float: left;
+  font-family: Impact, fantasy, sans-serif;
 }
 
 .topnav {
@@ -39,7 +40,7 @@ body {
 }
 
 .topnav img {
-  width: 3rem;
+  width: 5rem;
   float: left;
 }
 
@@ -72,6 +73,10 @@ footer {
   left: 0; right: 0; bottom: 0;
   color: white;
   background-color: #4B2E83;
+}
+
+.search-bar {
+  width: 60%;
 }
 
 /* index page */

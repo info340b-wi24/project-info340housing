@@ -14,7 +14,7 @@
         ]
     },
     {
-        "question": "Do you prefer a long-term lease or a short-term lease?",
+        "question": "Do you prefer long-term or short-term lease?",
         "id": "map_2",
         "answers": [
             {
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "question": "How important is living near a grocery store to you?",
+        "question": "How important is near a grocery store to you?",
         "id": "map_4",
         "answers": [
             {
@@ -80,7 +80,7 @@
         ]
     },
     {
-        "question": "Do you mind living in an outdated building?",
+        "question": "How important is a modern building to you?",
         "id": "map_5",
         "answers": [
             {
