@@ -1,7 +1,5 @@
 import React from 'react';
-import MapPage from './MapPage.js';
 import { NavLink } from 'react-router-dom';
-import SavedPage from './SavedPage.js';
 
 export function Header() {
     return (
@@ -16,13 +14,13 @@ export function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className="nav-link" activeClassName="active" exact to="/">Home</NavLink>
+                                <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" activeClassName="active" to="/map">Location</NavLink>
+                                <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/map">Location</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" activeClassName="active" to="/saved">Profile</NavLink>
+                                <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} to="/saved">Profile</NavLink>
                             </li>
                         </ul>
                     </div>
@@ -32,7 +30,7 @@ export function Header() {
     );
 }
 
-export function Footer (){
+export function Footer() {
     return (
         <footer>
             <p>&copy; 2024 DubsHousing, Inc.</p>

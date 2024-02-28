@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { push as firebasePush, ref, getDatabase } from 'firebase/database';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+// import { push as firebasePush, ref, getDatabase } from 'firebase/database';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function HousingDuty(props) {
     const duty = props.duty;

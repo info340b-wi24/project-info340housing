@@ -4,7 +4,7 @@ function UserProfile() {
   return (
     <div className="saved_container">
       <section className="saved_row">
-        <img className="saved_profile_image mt-3" src="/img/user.png" alt="Default Profile Picture Icon" />
+        <img className="saved_profile_image mt-3" src="/img/user.png" alt="Default Profile" />
         <h1>Username000</h1>
         <p>Email: <a href="mailto:username000@gmail.com">username000@gmail.com</a ></p >
         <p>Phone: <a href="tel:+12061112222">206-111-2222</a ></p >
