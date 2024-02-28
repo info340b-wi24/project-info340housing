@@ -11,7 +11,7 @@ function HouseList(props) {
             <Card.Body>
                 <Card.Title>{houseListTitle}</Card.Title>
                 <Card.Text>{houseListAddress}</Card.Text>
-                <Link to={houseInfoPath} className="btn btn-primary">Description</Link>
+                <Link to={"/HousingInfo" + houseInfoPath} className="btn btn-primary">Description</Link>
             </Card.Body>
         </Card>
     );
@@ -66,14 +66,12 @@ export default function HouseLists(props) {
 
     return (
         <section>
-            <div className="home">
-                <div className="col-md-6">
-                    {<SearchCom className='search btn btn-secondary btn-block'userInput={userInput} setUserInput={setUserInput} /> }
-                </div>
+            <div className="home">     
+                {<SearchCom className='search btn btn-secondary btn-block'userInput={userInput} setUserInput={setUserInput} /> }
             </div>
 
             <div>
-                <section id="final apartment">
+                <section className="apartments">
                 <div className="container d-flex flex-column flex-lg-row">
                     {filteredHouses.length === 0 ? (
                     <p>We're sorry, but there are no apartments matching your search.</p>

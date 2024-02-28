@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { push as firebasePush, ref, getDatabase } from 'firebase/database';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 function HousingDuty(props) {
     const duty = props.duty;
@@ -11,6 +11,7 @@ function HousingDuty(props) {
 }
 
 function HousingOption(props) {
+    const navigate = useNavigate();
     const [save, setSave] = useState(false);
 
     const Housing_Duties_Data = [
@@ -28,10 +29,11 @@ function HousingOption(props) {
     const { housingName, housingdetailImg, housingImgAlt, housingInfo, housingDuties } = props.infosDescr;
 
     const handleSave = () => {
-        const data = getDatabase();
-        const savedHousing = ref(data, "savedHousing");
-        firebasePush(savedHousing, {title: housingName, description: housingInfo, image: housingdetailImg, imageAlt: housingImgAlt});
+        // const data = getDatabase();
+        // const savedHousing = ref(data, "savedHousing");
+        // firebasePush(savedHousing, {title: housingName, description: housingInfo, image: housingdetailImg, imageAlt: housingImgAlt});
         setSave(true);
+        navigate("/saved");
     }
 
     return (
@@ -46,7 +48,7 @@ function HousingOption(props) {
                 {housingDuties && <ul>{HousingDutiesList}</ul>}
             </div>
             <div className="mb-3">
-                <Link to="/saved" className="btn purple-button mx-2" onClick={handleSave} disabled={save}>Save It</Link>
+                <button className="btn btn-primary mx-2" onClick={handleSave} disabled={save}>Save It</button>
             </div>
         </div>
     );
@@ -63,21 +65,21 @@ export function InfoDescr(props) {
         houseInfoPath: "arista-page"},
 
         {housingName: "Hub U District Seattle",
-        housingdetailImg:"img/hub-detail.png",
+        housingdetailImg:"/img/hub-detail.png",
         housingImgAlt: "The detail of Inside Hub U District Apartment",
         housingInfo: "Hub U District Seattle provides a modern, vibrant living space with fully furnished studio, 1, 2, 3, and 4 bedroom apartments near the University of Washington. Designed to cater to the lifestyle of its residents, the community boasts an array of amenities including a state-of-the-art fitness center, a rooftop deck complete with BBQ facilities for entertaining, and a convenient pet washing station. This blend of comfort, convenience, and luxury makes it an ideal choice for those seeking a dynamic urban living experience in Seattle, WA.", 
         housingDuties: true,
         houseInfoPath: "hub-page"},
 
         {housingName: "The M Seattle", 
-        housingdetailImg: "img/the-m-detail.png",
+        housingdetailImg: "/img/the-m-detail.png",
         housingImgAlt: "The detail of Inside The M Apartment",
         housingInfo: "The M, located in the vibrant heart of the U-District within King County and the 98105 ZIP Code, offers a stunning selection of studio, one-, two-, and four-bedroom apartments. Perfectly positioned for both academic pursuits and urban exploration, residents of The M are just steps away from their classes and a diverse array of entertainment options. This apartment community, served by the Seattle Public Schools attendance zone, represents the epitome of convenience and style in Seattle's bustling educational and cultural hub.", 
         housingDuties: true,
         houseInfoPath: "them-page"},
 
         {housingName: "The Standard at Seattle", 
-        housingdetailImg: "img/standard-detail.png", 
+        housingdetailImg: "/img/standard-detail.png", 
         housingImgAlt: "The detail of Inside Standard Apartment",
         housingInfo: "Discover the epitome of comfort, design, and quality living at The Standard at Seattle, situated in the vibrant University District of Seattle, King County. With its location in the 98105 ZIP Code and under the Seattle Public Schools attendance zone, this apartment community is an ideal choice for those seeking an exceptional living environment. The professional leasing team is eager to assist you in finding your ideal residence, ensuring a seamless transition to your new home. As a distinguished UW off-campus housing option, The Standard at Seattle is crafted to enhance the college experience, offering a blend of luxurious interior features and an array of community amenities. Positioned adjacent to the University of Washington campus, it provides unparalleled convenience for students. The community showcases a diverse selection of floor plans, ranging from studios to spacious 1-, 2-, 4-, and 6-bedroom apartments, designed to accommodate various living preferences and styles. Experience the new standard of living at The Standard at Seattle, where every detail is tailored to exceed your expectations.", 
         housingDuties: true,

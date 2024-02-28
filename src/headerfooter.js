@@ -1,18 +1,33 @@
+import React from 'react';
+import MapPage from './MapPage.js';
+import { NavLink } from 'react-router-dom';
+import SavedPage from './SavedPage.js';
+
 export function Header (){
     return (
         <header>
-            <div className="topnav" id="myTopnav">
-                <h2 className="project-name">Dubs Housing</h2>
-                <img src="../public/img/dubslogo.png" alt="washington husky" />
-                <button class="menu-toggle" onclick="toggleMenu()">
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                </button>
-                <a href=" ">Home</a >
-                <a href="map.html">Location</a >
-                <a href="saved.html">Profile</a >
-            </div>
+            <nav className="topnav navbar navbar-expand-lg" id="myTopnav">
+                <div class="container-fluid">
+                    <h1 className="project-name navbar-brand">Dubs Housing</h1>
+                    <img src="/img/dubslogo.png" alt="washington husky" />
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <NavLink className='nav-link' to="/">Home</NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink className='nav-link' to="/map">Location</NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink className='nav-link' to="/saved">Profile</NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
     );
 }

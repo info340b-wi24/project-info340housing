@@ -1,18 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom';
 import './style.css';
-import questions from "./questions.json";
+import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter} from 'react-router-dom';
+import 'bootstrap/dist/js/bootstrap';
+import { BrowserRouter } from 'react-router-dom';
+import questions from "./questions.json";
+import apartments from './apartment.json';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App/>
+      <App questions={questions} apartments={apartments} />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

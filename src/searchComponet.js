@@ -16,19 +16,13 @@ export default function SearchCom({ userInput, setUserInput }) {
     };
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-10">
-                    <div className="card p-3 py-4">
-                        <SearchItem
-                            userInput={userInput}
-                            handleInputChange={handleInputChange}
-                            handleSearch={handleSearch}
-                            handleReset={handleReset}
-                        />
-                    </div>
-                </div>
-            </div>
+        <div className="card p-3 py-4 mx-4 w-100">
+            <SearchItem
+                userInput={userInput}
+                handleInputChange={handleInputChange}
+                handleSearch={handleSearch}
+                handleReset={handleReset}
+            />
         </div>
     );
 }
