@@ -54,6 +54,11 @@ body {
   color: white;
 }  
 
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  background-color: white;
+  color: black;
+}
+
 footer p {
   margin: 0;
   line-height: 1.5;
@@ -145,7 +150,7 @@ footer {
 /* map page */
 .top-heading {
   text-align: center;
-  font-family: "Asap", 'Kaushan Script', fantasy, 'sans-serif';
+  font-family: "Asap", 'Kaushan Script', fantasy, sans-serif;
   font-size: 3.5rem;
   margin-top: 3vh;
   margin-bottom: 1vh;
@@ -155,7 +160,7 @@ footer {
 
 .result-texts {
   text-align: center;
-  font-family: fantasy, 'sans-serif';
+  font-family: fantasy, sans-serif;
   font-size: 1.3rem;
   color: rgb(16, 11, 0); 
   padding-top: 1.5rem;
@@ -238,7 +243,7 @@ iframe{
 
 .flex-cards p,label{
   font-size: 1.3rem;
-  font-family: Monaco, Roboto, 'sans-serif';
+  font-family: Monaco, Roboto, sans-serif;
 }
 
 /* profile page */

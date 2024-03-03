@@ -32,35 +32,38 @@ export function MapQuestionList({ questions, updateAllSelections, updateSubmitte
         updateSubmitted(true);
     };
 
+    // just extract from return
+    const answerElements = currentQuestion.answers.map(answer => (
+        <div key={answer.id}>
+            <input 
+                type="radio" 
+                id={answer.id} 
+                name={currentQuestion.id} 
+                value={answer.value} 
+                checked={selectedAnswers[currentQuestionIndex] === answer.id}
+                onChange={() => handleAnswerSelect(answer.id)} 
+                disabled={submitted}
+            />
+            <label htmlFor={answer.id}>{answer.value}</label>
+        </div>
+    ));
+
     return (
         <div className="flex-cards">
             <div key={currentQuestion.id}>
-                <p>{currentQuestion.question}</p>
+                <p>{currentQuestion.question}</p >
                 <form>
-                    {currentQuestion.answers.map(answer => (
-                        <div key={answer.id}>
-                            <input 
-                                type="radio" 
-                                id={answer.id} 
-                                name={currentQuestion.id} 
-                                value={answer.value} 
-                                checked={selectedAnswers[currentQuestionIndex] === answer.id}
-                                onChange={() => handleAnswerSelect(answer.id)} 
-                                disabled={submitted}
-                            />
-                            <label htmlFor={answer.id}>{answer.value}</label>
-                        </div>
-                    ))}
+                    {answerElements} 
                 </form>
             </div>
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            {errorMessage && <p className="error-message">{errorMessage}</p >}
             {submitted && (
                 <div>
-                    <p className='mt-2'> 🎉Thank you for submitting!</p>
-                    <p>The best apartment for you are shown above!</p>
+                    <p className='mt-2'> 🎉Thank you for submitting!</p >
+                    <p>The best apartment for you are shown above!</p >
                 </div>
             )}
-            {!submitted && ( // Render submit button only if not submitted
+            {!submitted && ( 
                 currentQuestionIndex < questions.length - 1 ? (
                     <button className='btn btn-light mt-2' onClick={handleNextClick} disabled={submitted}>Next</button>
                 ) : (
