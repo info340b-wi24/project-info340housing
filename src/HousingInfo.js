@@ -28,6 +28,7 @@ function HousingOption(props) {
 
     const { housingName, housingdetailImg, housingImgAlt, housingInfo, housingDuties } = props.infosDescr;
 
+    //在这里写入数据
     const handleSave = () => {
         setSave(true);
         navigate("/saved");
@@ -45,7 +46,7 @@ function HousingOption(props) {
                 {housingDuties && <ul className="house-duties-list">{HousingDutiesList}</ul>}
             </div>
             <div className="house-save-button">
-                <button className="btn btn-primary" onClick={handleSave} disabled={save}>Save It</button>
+                <button className="btn btn-primary" onClick={handleSave} disabled={save}>Favorite</button>
             </div>
         </div>
     );
