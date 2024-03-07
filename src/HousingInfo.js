@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-// import { push as firebasePush, ref, getDatabase } from 'firebase/database';
 import { useParams, useNavigate } from 'react-router-dom';
+import { getDatabase, ref, push, set } from 'firebase/database';
 
 function HousingDuty(props) {
     const duty = props.duty;
@@ -13,6 +13,7 @@ function HousingDuty(props) {
 function HousingOption(props) {
     const navigate = useNavigate();
     const [save, setSave] = useState(false);
+    const [notes, setNotes] = useState('');
 
     const Housing_Duties_Data = [
         "We have on-site Management",
@@ -28,10 +29,21 @@ function HousingOption(props) {
 
     const { housingName, housingdetailImg, housingImgAlt, housingInfo, housingDuties } = props.infosDescr;
 
-    //在这里写入数据
     const handleSave = () => {
         setSave(true);
-        navigate("/saved");
+        const database = getDatabase();
+        const notesRef = ref(database, 'notes');
+    
+        // Push the notes content to the database
+        push(notesRef, {
+            title: housingName,
+            notes: notes
+        }).then(() => {
+            console.log('Notes saved successfully');
+            navigate('/saved');
+        }).catch(error => {
+            console.error('Error saving notes: ', error);
+        });
     }
 
     return (
@@ -45,8 +57,21 @@ function HousingOption(props) {
                 <p className="house-info-paragraph">{housingInfo}</p>
                 {housingDuties && <ul className="house-duties-list">{HousingDutiesList}</ul>}
             </div>
+            <div className="house-notes-container">
+                <div>
+                    <label htmlFor="notes_2" className="house-notes-label">Notes</label>
+                </div>
+                <textarea 
+                    id="notes_2" 
+                    rows="8" 
+                    cols="32" 
+                    value={notes}
+                    placeholder="Eg: in King County's 98105, offers 1-3 bedroom options, scenic views, a gym, package service, and study rooms."
+                    onChange={(e) => setNotes(e.target.value)}>
+                </textarea>
+            </div>
             <div className="house-save-button">
-                <button className="btn btn-primary" onClick={handleSave} disabled={save}>Favorite</button>
+                <button className="btn btn-primary" onClick={handleSave} disabled={save}>Save It</button>
             </div>
         </div>
     );

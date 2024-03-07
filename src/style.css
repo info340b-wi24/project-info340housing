@@ -59,10 +59,6 @@ body {
   color: black;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
 footer p {
   margin: 0;
   line-height: 1.5;
@@ -95,6 +91,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 
 .home {
   background-image: url('../public/img/spaceneedle.jpg');
@@ -330,6 +327,19 @@ iframe{
   font-size: 18px;
 }
 
+.house-notes-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.saved_housing_container{
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 /* Filter container */
 .saved_sort {
   display: flex;
@@ -381,6 +391,11 @@ iframe{
     width: 200px;
   }
 
+  .saved_housing_container{
+    margin: 4rem;
+  }
+
+
 }
 
 @media (min-width: 992px) {
@@ -429,6 +444,10 @@ iframe{
   .saved_card textarea{
     height: 100px;
     width: 300px;
+  }
+
+  .saved_housing_container{
+    margin: 1rem 5rem 5rem 5rem;
   }
 
 }
