@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import HouseLists from './HouseList';
 import { InfoDescr } from './HousingInfo';
 import { Header, Footer } from './headerfooter';
@@ -16,11 +16,10 @@ export default function App(props) {
           <Route path="/HousingInfo/:id" element={<InfoDescr />} />
           <Route path="/map" element={<MapPage questions={props.questions} apartments={props.apartments} />} />
           <Route path="/saved" element={<SavedPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
       <Footer />
     </div>
   );
 }
-
-// housing-info low cap

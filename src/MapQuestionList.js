@@ -32,7 +32,6 @@ export function MapQuestionList({ questions, updateAllSelections, updateSubmitte
         updateSubmitted(true);
     };
 
-    // just extract from return
     const answerElements = currentQuestion.answers.map(answer => (
         <div key={answer.id}>
             <input 

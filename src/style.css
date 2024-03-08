@@ -59,6 +59,10 @@ body {
   color: black;
 }
 
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 footer p {
   margin: 0;
   line-height: 1.5;
@@ -91,7 +95,6 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 
 .home {
   background-image: url('../public/img/spaceneedle.jpg');
@@ -165,7 +168,6 @@ footer {
   font-size: 1.3rem;
   color: rgb(16, 11, 0); 
   padding-top: 1.5rem;
-  line-height: 0.8;
 }
 
 .flex-container-overall {
@@ -207,39 +209,7 @@ iframe{
   padding: 0.1rem 1rem 0.5rem 1rem;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0.1,0.1,0.1,0.1);
-}
-
-/* Questions cards in map page */
-.flex-cards:first-child {
-  background-color: rgb(255,163,191);
-}
-
-.flex-cards:nth-child(2) {
   background-color: rgb(255,220,167);
-}
-
-.flex-cards:nth-child(3) {
-  background-color: rgb(247,255,178);
-}
-
-.flex-cards:nth-child(4) {
-  background-color: rgb(228,235,207);
-}
-
-.flex-cards:nth-child(5) {
-  background-color:rgb(180,223,255);
-}
-
-/* Post a question */
-.flex-cards:nth-child(6) {
-  background-color: rgb(134,161,219);
-  line-height: 2rem;
-}
-
-/* submit button */
-.flex-cards:nth-child(7) {
-  background-color: rgb(247, 191, 49);
-  width: 6rem;
 }
 
 .flex-cards p,label{
@@ -248,18 +218,6 @@ iframe{
 }
 
 /* profile page */
-.saved_card textarea {
-  height: 50px;
-  width: 200px;
-  justify-content: center;
-}
-
-.saved_card button, .saved_card label {
-  display: block;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
 
 .saved_profile_image {
   width: 100px; 
@@ -277,59 +235,12 @@ iframe{
   padding: 0;
 }
 
-.saved_housing{
-  width: 300px;
-  height: 200px;
-}
-
-.saved_card h2 .saved_contact {
-  width: 35px;
-  height: 35px;
-}
-
-.saved_card-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.saved_card {
-  box-sizing: border-box;
-  padding: 20px;
-  
-}
-
-.saved_container:nth-child(1) a {
-  text-decoration: none;
-  color:black;
-}
-
-.saved_container:nth-child(1) h2 {
-  font-size: 24px;
-}
-
-.saved_container:nth-child(2) {
-  margin-top:20px;
-}
-
-.saved_container .saved_row .saved_favorite {
-  font-size: 30px;
-}
-
 .saved_row {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 0;
-}
-
-.saved_container .saved_row p {
-  font-size: 18px;
-}
-
-.house-notes-container {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 .saved_housing_container{
@@ -339,118 +250,6 @@ iframe{
   justify-content: center;
 }
 
-
-/* Filter container */
-.saved_sort {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.saved_sort label,
-.saved_sort select {
-  margin: 0.5rem;
-}
-  
-/* responsive media */
-@media (min-width: 598px) {
-  .home {
-      height: 500px; 
-  }
-
-  /* map page start */
-  h1, h3{
-    font-size: 1.5rem;
-    margin-top: 5vh;
-  }
-
-  .overall-google-map{
-    margin-bottom: 3rem;
-  }
-
-  .flex-container-overall {
-    flex-direction: column;
-  }
-
-  /* map page end */
-  .saved_container .saved_row{
-    font-size:23px;
-    }
-  
-  .saved_card-container {
-    flex-direction: row;
-  }
-
-  .saved_card h1 {
-    font-size: 2rem;
-  }
-
-  .saved_card textarea{
-    height: 70px;
-    width: 200px;
-  }
-
-  .saved_housing_container{
-    margin: 4rem;
-  }
-
-
-}
-
-@media (min-width: 992px) {
-  .home {
-    height: 600px;
-  }
-  
-  .home-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .topnav a {
-    padding: 14px 20px;
-  }
-
-  .footer p {
-    line-height: 2;
-  }
-
-  /* map page start */
-  .flex-container-overall {
-    display: flex;
-    height: 100%;
-    flex-direction: row;
-  }
-
-  .flex-container-leftbar, .flex-container-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .overall-google-map {
-    margin-top: 2rem;
-    justify-content: center;
-    flex: 1;
-  }
-
-  .saved_card label, .saved_card button {
-    display: block;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-
-  .saved_card textarea{
-    height: 100px;
-    width: 300px;
-  }
-
-  .saved_housing_container{
-    margin: 1rem 5rem 5rem 5rem;
-  }
-
-}
 
 /* housing option */
 .house-info-container {
@@ -505,3 +304,76 @@ iframe{
   text-align: center;
 }
 
+.house-notes-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+  
+/* responsive media */
+@media (min-width: 598px) {
+  .home {
+      height: 500px; 
+  }
+
+  /* map page start */
+  h1, h3{
+    font-size: 1.5rem;
+    margin-top: 5vh;
+  }
+
+  .overall-google-map{
+    margin-bottom: 3rem;
+  }
+
+  .flex-container-overall {
+    flex-direction: column;
+  }
+
+  .saved_housing_container{
+    margin: 4rem;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .home {
+    height: 600px;
+  }
+  
+  .home-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .topnav a {
+    padding: 14px 20px;
+  }
+
+  .footer p {
+    line-height: 2;
+  }
+
+  /* map page start */
+  .flex-container-overall {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+  }
+
+  .flex-container-leftbar, .flex-container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .overall-google-map {
+    margin-top: 2rem;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .saved_housing_container{
+    margin: 1rem 5rem 5rem 5rem;
+  }
+
+}

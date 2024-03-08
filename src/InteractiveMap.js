@@ -1,4 +1,3 @@
-// render google map
 export function InteractiveMap() {
     return (
       <section>
@@ -8,4 +7,4 @@ export function InteractiveMap() {
           </div>
       </section>
     );
-  }
+}

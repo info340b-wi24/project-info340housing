@@ -7,7 +7,6 @@ export default function SearchCom({ userInput, setUserInput }) {
     };
 
     const handleSearch = () => {
-        // Handle search logic here, if needed
         console.log('Searching for:', userInput);
     };
 

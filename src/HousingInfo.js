@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
-import { getDatabase, ref, push, set } from 'firebase/database';
+import { getDatabase, ref, push} from 'firebase/database';
 
 function HousingDuty(props) {
     const duty = props.duty;
@@ -71,7 +71,7 @@ function HousingOption(props) {
                 </textarea>
             </div>
             <div className="house-save-button">
-                <button className="btn btn-primary" onClick={handleSave} disabled={save}>Save It</button>
+                <button className="btn btn-primary" onClick={handleSave} disabled={save}>Favorite</button>
             </div>
         </div>
     );

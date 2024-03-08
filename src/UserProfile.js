@@ -6,8 +6,8 @@ function UserProfile() {
       <section className="saved_row">
         <img className="saved_profile_image mt-3" src="/img/user.png" alt="Default Profile" />
         <h1>Username000</h1>
-        <p>Email: <a href="mailto:username000@gmail.com">username000@gmail.com</a ></p >
-        <p>Phone: <a href="tel:+12061112222">206-111-2222</a ></p >
+        <p>Gender: Female</p >
+        <p>Pronounce: She/Her</p >
         <p>Preferred Location: Seattle, Wa</p >
         <p>Preferences: walking distance, public transit</p >
         <p>Leaser or Subleaser or Both or None: Leaser</p >

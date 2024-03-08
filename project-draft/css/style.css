@@ -104,17 +104,17 @@ footer {
   color: white
 }
 
-.search button {
+/* .search button {
   background-color: #4B2E83;
-}
-
+} */
+/* 
 .card-title {
   font-size: 1.5rem;
-}
+} */
 
-.card-text {
+/* .card-text {
   font-size: 1rem;
-}
+} */
 
 .card img {
   display: block;
@@ -126,11 +126,6 @@ footer {
 
 .card {
   box-shadow: 5px 5px 5px 5px rgba(0.1,0.1,0.1,0.1)
-}
-
-.explore-rentals h1 {
-  margin-top: 5rem;
-  text-align: center;
 }
 
 
