@@ -1,0 +1,102 @@
+[debug] [2024-03-08T08:42:43.841Z] ----------------------------------------------------------------------
+[debug] [2024-03-08T08:42:43.843Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --debug
+[debug] [2024-03-08T08:42:43.843Z] CLI Version:   13.4.1
+[debug] [2024-03-08T08:42:43.843Z] Platform:      darwin
+[debug] [2024-03-08T08:42:43.843Z] Node Version:  v21.5.0
+[debug] [2024-03-08T08:42:43.843Z] Time:          Fri Mar 08 2024 00:42:43 GMT-0800 (Pacific Standard Time)
+[debug] [2024-03-08T08:42:43.843Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-08T08:42:43.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-08T08:42:43.875Z] > authorizing via signed-in user (selenayu@uw.edu)
+[debug] [2024-03-08T08:42:43.875Z] [iam] checking project dubs-housing-ab674 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2024-03-08T08:42:43.876Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dubs-housing-ab674:testIamPermissions [none]
+[debug] [2024-03-08T08:42:43.876Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dubs-housing-ab674:testIamPermissions x-goog-quota-user=projects/dubs-housing-ab674
+[debug] [2024-03-08T08:42:43.876Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dubs-housing-ab674:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-03-08T08:42:44.073Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dubs-housing-ab674:testIamPermissions 200
+[debug] [2024-03-08T08:42:44.073Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dubs-housing-ab674:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-03-08T08:42:44.074Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dubs-housing-ab674 [none]
+[debug] [2024-03-08T08:42:44.469Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dubs-housing-ab674 200
+[debug] [2024-03-08T08:42:44.470Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dubs-housing-ab674 {"projectId":"dubs-housing-ab674","projectNumber":"631954428417","displayName":"Dubs Housing","name":"projects/dubs-housing-ab674","resources":{"hostingSite":"dubs-housing-ab674","realtimeDatabaseInstance":"dubs-housing-ab674-default-rtdb"},"state":"ACTIVE","etag":"1_65ad0e26-031b-4a8e-bc45-7f0d65e967b3"}
+[debug] [2024-03-08T08:42:44.471Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dubs-housing-ab674 [none]
+[debug] [2024-03-08T08:42:44.759Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dubs-housing-ab674 200
+[debug] [2024-03-08T08:42:44.760Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dubs-housing-ab674 {"projectId":"dubs-housing-ab674","projectNumber":"631954428417","displayName":"Dubs Housing","name":"projects/dubs-housing-ab674","resources":{"hostingSite":"dubs-housing-ab674","realtimeDatabaseInstance":"dubs-housing-ab674-default-rtdb"},"state":"ACTIVE","etag":"1_65ad0e26-031b-4a8e-bc45-7f0d65e967b3"}
+[info] 
+[info] === Deploying to 'dubs-housing-ab674'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2024-03-08T08:42:44.768Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/dubs-housing-ab674/locations/-/instances/dubs-housing-ab674-default-rtdb [none]
+[debug] [2024-03-08T08:42:45.176Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/dubs-housing-ab674/locations/-/instances/dubs-housing-ab674-default-rtdb 200
+[debug] [2024-03-08T08:42:45.176Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/dubs-housing-ab674/locations/-/instances/dubs-housing-ab674-default-rtdb {"name":"projects/631954428417/locations/us-central1/instances/dubs-housing-ab674-default-rtdb","project":"projects/631954428417","databaseUrl":"https://dubs-housing-ab674-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2024-03-08T08:42:45.179Z] >>> [apiv2][query] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json dryRun=true
+[debug] [2024-03-08T08:42:45.179Z] >>> [apiv2][body] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2024-03-08T08:42:45.384Z] <<< [apiv2][status] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-03-08T08:42:45.384Z] <<< [apiv2][body] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json {"status":"ok"}
+[info] ✔  database: rules syntax for database dubs-housing-ab674-default-rtdb is valid 
+[debug] [2024-03-08T08:42:45.390Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions [none]
+[debug] [2024-03-08T08:42:45.390Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-03-08T08:42:46.124Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions 200
+[debug] [2024-03-08T08:42:46.125Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions {"name":"projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[dubs-housing-ab674]: beginning deploy... 
+[info] i  hosting[dubs-housing-ab674]: found 41 files in build 
+[debug] [2024-03-08T08:42:46.140Z] [hosting] uploading with 200 concurrency
+[debug] [2024-03-08T08:42:46.146Z] [hosting] hash cache [YnVpbGQ] stored for 41 files
+[debug] [2024-03-08T08:42:46.146Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":41,"success":41,"errored":0,"retried":0,"total":41,"elapsed":4}
+[debug] [2024-03-08T08:42:46.146Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e:populateFiles [none]
+[debug] [2024-03-08T08:42:46.146Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e:populateFiles {"files":{"/asset-manifest.json":"a423171afab5470bb0d801df3ea114bc3e6ec4297ed678200f651f2470dfc438","/index.html":"6782cb00c2c9720f1b69e68e886b505ee30fa18a0c300756d83e3a291010cf8b","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/img/Arista.png":"9ff650ff341a6e8c77666872aae1c4bdaa1ae5cdff27ffc299842f320dac4d57","/img/HUB_UDistrict.jpg":"60dd189de1d54b6a90f5a8ba2fd41f777a0a2b76e7a4425749f113550660c04a","/img/HubU.png":"6f673abde93238f93981bd3adf8b13ddeacdd06b7f790a19be3778e66385fed7","/img/TheM.png":"bbae51aabca776538a7921ad7576d98746f59fbfaa5d9e6cb7b9dc4b434a6100","/img/arista-detail.png":"59cd20a1dcc08938fa1b207fde774bf9c1ac72c1c77abfc092084b9fc03ded4b","/img/arista-detail2.png":"c30da4aae7282c59665b614adc4d2610686d06af872ca1c33320fe56dd425f65","/img/arista-detail3.png":"3741f9d3f505467a47fbdeba113a49c103aaca3dd5f288be4d80c0a984286591","/img/dubslogo.png":"0baac2fd44cccea880a80fe7158d15d0fd2d8c00d140baf8a10d7ea2747aa50f","/img/email.png":"15ca81a560ad8d148961d92e3f7a38a091ee543c3571700b9656f28c024ef050","/img/flower.jpg":"6a62d6198aa9db1fef8b6a1fcd8beebca346a8be55aaf0009d0f3f69f7da376d","/img/heart.png":"a44159702c2fd0276a3176c1557dff41d17f0221b4ec6e583539dd14791ebf2f","/img/home.png":"53dfa453afcdb2e0db8cda626baed171c9f8b5b54bf03ccdb357974e4b999e25","/img/homepage.jpg":"858c6b436d541120771edccacb156c1c7d55d76212c89106f478bf790eb75b60","/img/hub-detail.png":"0580bbea7888742a21850c10db0afc583cc89ed2cbd04dccdfe3d9c3e2631f70","/img/hub-detail2.png":"b68d0744538472852be8a49479b70352b6ac61d13e7b9d5b06e26fee26d18f51","/img/hub-detail3.png":"476743a0e128311f49ee0b76a98a0b2374acea9ccdb42712d3f656fc73c7cbb4","/img/location.png":"79a9b535f5429d213780d36ec8c827f28b02ee261ebcad487257a42a22e0ea2f","/img/map_background.jpg":"aff06eab080371bc5b7f0c8c8dc27e0d21d15ae0eb9cdc0e1b47656ba6fecd6b","/img/map_text_background.png":"789a82159ba0d117837f65f54256da4a8a168e41c56f98bbe48e8c0bf923a4a1","/img/next.png":"2a22dbc3cb1d43de1783862a5056aeea2694dcddae524f89d077af191fd232d0","/img/noraapartments.jpg":"709ae7a3d5fc3c6b03c259e943fc1064b0c7eb74c92acc5393d09761af747264","/img/phone.png":"a75da6da7bf9f55e0ccd54f63e643d210cf2bffa5e7c667b2a6e204ede854274","/img/search.png":"dd02059e5835169cbf39ce2f8722b04cdf3854e293c2e4b0313bda0dd5913187","/img/seattle.jpg":"fdcc2395ff2fb2b0669e1091e28ba9f88c22f1f9951a5de6fd4af441dbb5d291","/img/spaceneedle.jpg":"933e0a954528881abccf9d68f12f824b8e27cc54d2d353ed2dc47d51251a2775","/img/standard-deatil2.png":"6b49e9771b3b801994e2ed178c24118cf60ea2dc025a3f23eb07ca341193a6dc","/img/standard-detail.png":"c4249d09c10405a629b11742bcc13730277952ba12ff5d282a2b5a8d92369737","/img/standard-detail3.png":"df0f8510e5676ff456d38af6f8bdbd68a45e1975ce41145c14ba73814a5fe2b6","/img/standard.png":"401b5bfbf33400abff6f1c93410f569f467ed6c30f1686aa9114aaa182fcbaad","/img/the-m-detail.png":"4d61a3bcb1d36d6dce1322ce486f5ae8b4e4dce5bd7b4f8751149d577f3d34c8","/img/the-m-detail2.ong.webp":"32e473ee6a4ed8ef5cc4139c3e69c0f178796590893dca95629dbfd21f1e90f3","/img/user.png":"6d8642f1f691748f422d27f4cb5c1113f77fc537396aed05bd788e0ea644a426","/static/css/main.388bba4d.css":"11f6418f51fffa2334d98e91c037edcbc7363b04fd0fb1418c5579475ef28534","/static/css/main.388bba4d.css.map":"70bde1a2fe405208d40d0eb1e8ed4ddfa9195280049234095426aa1f6ed196b1","/static/js/main.5e038b47.js":"b9459a3108b53410920aabce6b84c0e0f074e3513d9b920a61c179ae141cf5e9","/static/js/main.5e038b47.js.LICENSE.txt":"864dd8442f15b94a1df81791d78b91754e1f9146555d4d97c63afd8510bb9c89","/static/js/main.5e038b47.js.map":"bd8a6181b2fe7438dae0453bee798133f5faef124f64328fa5ea8ae0a3d45588","/static/media/spaceneedle.82472b855cf1a60e74b1.jpg":"933e0a954528881abccf9d68f12f824b8e27cc54d2d353ed2dc47d51251a2775"}}
+[debug] [2024-03-08T08:42:46.470Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e:populateFiles 200
+[debug] [2024-03-08T08:42:46.470Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/dubs-housing-ab674/versions/41230d6de67fe17e/files"}
+[debug] [2024-03-08T08:42:46.470Z] [hosting][populate queue][FINAL] {"max":325,"min":325,"avg":325,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":325}
+[debug] [2024-03-08T08:42:46.470Z] [hosting] uploads queued: 0
+[debug] [2024-03-08T08:42:46.471Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1709887366471}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[dubs-housing-ab674]: file upload complete 
+[debug] [2024-03-08T08:42:46.471Z] [hosting] deploy completed after 344ms
+[info] i  database: releasing rules... 
+[debug] [2024-03-08T08:42:46.472Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/dubs-housing-ab674/locations/-/instances/dubs-housing-ab674-default-rtdb [none]
+[debug] [2024-03-08T08:42:46.572Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/dubs-housing-ab674/locations/-/instances/dubs-housing-ab674-default-rtdb 200
+[debug] [2024-03-08T08:42:46.573Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/dubs-housing-ab674/locations/-/instances/dubs-housing-ab674-default-rtdb {"name":"projects/631954428417/locations/us-central1/instances/dubs-housing-ab674-default-rtdb","project":"projects/631954428417","databaseUrl":"https://dubs-housing-ab674-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2024-03-08T08:42:46.574Z] >>> [apiv2][query] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json 
+[debug] [2024-03-08T08:42:46.574Z] >>> [apiv2][body] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2024-03-08T08:42:46.747Z] <<< [apiv2][status] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-03-08T08:42:46.748Z] <<< [apiv2][body] PUT https://dubs-housing-ab674-default-rtdb.firebaseio.com/.settings/rules.json {"status":"ok"}
+[info] ✔  database: rules for database dubs-housing-ab674-default-rtdb released successfully 
+[debug] [2024-03-08T08:42:46.749Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "dubs-housing-ab674"
+    },
+    "version": "projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e"
+  }
+]
+[info] i  hosting[dubs-housing-ab674]: finalizing version... 
+[debug] [2024-03-08T08:42:46.753Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions/41230d6de67fe17e updateMask=status%2Cconfig
+[debug] [2024-03-08T08:42:46.753Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions/41230d6de67fe17e {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-03-08T08:42:47.000Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions/41230d6de67fe17e 200
+[debug] [2024-03-08T08:42:47.001Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/versions/41230d6de67fe17e {"name":"projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-03-08T08:42:45.864501Z","createUser":{"email":"selenayu@uw.edu"},"finalizeTime":"2024-03-08T08:42:46.988540Z","finalizeUser":{"email":"selenayu@uw.edu"}}
+[debug] [2024-03-08T08:42:47.001Z] [hosting] finalized version for dubs-housing-ab674:[object Object]
+[info] ✔  hosting[dubs-housing-ab674]: version finalized 
+[info] i  hosting[dubs-housing-ab674]: releasing new version... 
+[debug] [2024-03-08T08:42:47.002Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/channels/live/releases versionName=projects%2F631954428417%2Fsites%2Fdubs-housing-ab674%2Fversions%2F41230d6de67fe17e
+[debug] [2024-03-08T08:42:47.002Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/channels/live/releases {}
+[debug] [2024-03-08T08:42:47.277Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/channels/live/releases 200
+[debug] [2024-03-08T08:42:47.278Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dubs-housing-ab674/channels/live/releases {"name":"projects/631954428417/sites/dubs-housing-ab674/channels/live/releases/1709887366676000","version":{"name":"projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-03-08T08:42:45.864501Z","createUser":{"email":"selenayu@uw.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIZiaUP4jPcx5V8tpXRRVl0of3FAK9jhlA7-Kwmj35r=mo"},"finalizeTime":"2024-03-08T08:42:46.988540Z","finalizeUser":{"email":"selenayu@uw.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIZiaUP4jPcx5V8tpXRRVl0of3FAK9jhlA7-Kwmj35r=mo"}},"type":"DEPLOY","releaseTime":"2024-03-08T08:42:46.676Z","releaseUser":{"email":"selenayu@uw.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIZiaUP4jPcx5V8tpXRRVl0of3FAK9jhlA7-Kwmj35r=mo"}}
+[debug] [2024-03-08T08:42:47.278Z] [hosting] release: {"name":"projects/631954428417/sites/dubs-housing-ab674/channels/live/releases/1709887366676000","version":{"name":"projects/631954428417/sites/dubs-housing-ab674/versions/41230d6de67fe17e","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-03-08T08:42:45.864501Z","createUser":{"email":"selenayu@uw.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIZiaUP4jPcx5V8tpXRRVl0of3FAK9jhlA7-Kwmj35r=mo"},"finalizeTime":"2024-03-08T08:42:46.988540Z","finalizeUser":{"email":"selenayu@uw.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIZiaUP4jPcx5V8tpXRRVl0of3FAK9jhlA7-Kwmj35r=mo"}},"type":"DEPLOY","releaseTime":"2024-03-08T08:42:46.676Z","releaseUser":{"email":"selenayu@uw.edu","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIZiaUP4jPcx5V8tpXRRVl0of3FAK9jhlA7-Kwmj35r=mo"}}
+[info] ✔  hosting[dubs-housing-ab674]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/dubs-housing-ab674/overview
+[info] Hosting URL: https://dubs-housing-ab674.web.app
