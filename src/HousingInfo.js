@@ -59,14 +59,14 @@ function HousingOption(props) {
             </div>
             <div className="house-notes-container">
                 <div>
-                    <label htmlFor="notes_2" className="house-notes-label">Notes</label>
+                    <label htmlFor="notes_2" className="house-notes-label"> ✏️ Notes 🏷️</label>
                 </div>
                 <textarea 
                     id="notes_2" 
                     rows="8" 
                     cols="32" 
                     value={notes}
-                    placeholder="Eg: in King County's 98105, offers 1-3 bedroom options, scenic views, a gym, package service, and study rooms."
+                    placeholder="You can either leave a note about it or save it directly to your favorites! Eg: in King County's 98105, offers 1-3 bedroom options, scenic views, a gym, package service, and study rooms."
                     onChange={(e) => setNotes(e.target.value)}>
                 </textarea>
             </div>

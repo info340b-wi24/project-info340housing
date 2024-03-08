@@ -5,7 +5,7 @@ import { InteractiveMap } from './InteractiveMap.js';
 
 function MapPage(props) {
     const [allSelections, setAllSelections] = useState([]);
-    const [submitted, setSubmitted] = useState([])
+    const [submitted, setSubmitted] = useState([]);
 
     const updateAllSelections = (newValue) => {
         setAllSelections(newValue);
@@ -15,8 +15,8 @@ function MapPage(props) {
         setSubmitted(newValue);
     };
 
-	return (
-		<main>         
+    return (
+        <main>         
             <div className="flex-container-overall">
                 <section>
                     <div className="flex-container-leftbar">
@@ -24,12 +24,10 @@ function MapPage(props) {
                         <MapQuestionList questions={props.questions} updateAllSelections={updateAllSelections} updateSubmitted={updateSubmitted}/>
                     </div>
                 </section>
-                
                 <InteractiveMap />            
             </div>
         </main>
-	);
+    );
 }
 
 export default MapPage;
-
